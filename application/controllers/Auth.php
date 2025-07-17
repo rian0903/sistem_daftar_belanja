@@ -12,19 +12,19 @@ class Auth extends CI_Controller {
     public function login() {
         if ($this->input->post()) {
             $email = $this->input->post('email');
-            $password = md5($this->input->post('password'));
+            $password = $this->input->post('password'); // plain text dari form
         
             $user = $this->User_model->login($email);
         
             if (!$user) {
                 $this->session->set_flashdata('error', 'Email tidak ditemukan.');
-                redirect('index.php/auth/login');
+                redirect('auth/login');
                 return;
             }
         
-            if ($user->password != $password) {
+            if (!password_verify($password, $user->password)) {
                 $this->session->set_flashdata('error', 'Password salah.');
-                redirect('index.php/auth/login');
+                redirect('auth/login');
                 return;
             }
         
@@ -37,9 +37,9 @@ class Auth extends CI_Controller {
             ]);
         
             if ($user->role_id == 1) {
-                redirect('index.php/admin');
+                redirect('admin/dashboard');
             } else {
-                redirect('index.php/pembeli');
+                redirect('pembeli');
             }
         }
     
@@ -58,14 +58,14 @@ class Auth extends CI_Controller {
             ];
             $this->User_model->register($data);
             $this->session->set_flashdata('success', 'Registrasi berhasil. Silakan login.');
-            redirect('index.php/auth/login');
+            redirect('auth/login');
         }
         $this->load->view('auth/register');
     }
 
     public function logout() {
         $this->session->sess_destroy();
-        redirect('index.php/landing');
+        redirect('landing');
     }
 
     public function reset_password() {

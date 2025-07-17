@@ -22,4 +22,11 @@ class User_model extends CI_Model {
     public function update($id, $data) {
         return $this->db->update('users', $data, ['id' => $id]);
     }
+    
+    public function updatePassword($id, $password)
+    {
+        $data = ['password' => $password];
+        $this->db->where('id', $id);
+        return $this->db->update('users', $data); // atau sesuaikan nama tabelnya
+    }
 }

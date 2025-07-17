@@ -6,7 +6,7 @@ class Pembeli extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if ($this->session->userdata('role_id') != 2) {
-            redirect('index.php/auth/login');
+            redirect('auth/login');
         }
 
         $this->load->model([
@@ -43,7 +43,7 @@ class Pembeli extends CI_Controller {
             'quantity' => 1
         ];
         $this->Cart_model->addToCart($data);
-        redirect('index.php/pembeli/keranjang');
+        redirect('pembeli/keranjang');
     }
 
     public function keranjang() {
@@ -84,7 +84,7 @@ class Pembeli extends CI_Controller {
 
             $this->Transaction_detail_model->insertBatch($detail);
             $this->Cart_model->deleteCart($user_id);
-            redirect('index.php/pembeli');
+            redirect('pembeli');
         } else {
             $data['content'] = 'pembeli/checkout';
             $this->load->view('pembeli/layout/master', $data);

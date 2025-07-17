@@ -10,7 +10,8 @@ class Product_model extends CI_Model {
         return $this->db->get()->result();
     }
 
-    public function getById($id) {
+    public function get_product_by_id($id)
+    {
         return $this->db->get_where('products', ['id' => $id])->row();
     }
 
@@ -18,8 +19,10 @@ class Product_model extends CI_Model {
         return $this->db->insert('products', $data);
     }
 
-    public function update($id, $data) {
-        return $this->db->update('products', $data, ['id' => $id]);
+    public function update_product($id, $data)
+    {
+        $this->db->where('id', $id);
+        return $this->db->update('products', $data);
     }
 
     public function delete($id) {

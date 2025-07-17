@@ -1,17 +1,26 @@
-<aside id="layout-menu" class="layout-menu menu-vertical bg-menu-theme">
-  <div class="app-brand px-3">
-    <a href="<?= base_url('index.php/admin') ?>" class="app-brand-link">
-      <span class="app-brand-logo"><img src="<?= base_url('assets/img/logo.png') ?>" width="30"></span>
-      <span class="app-brand-text fw-bold">Admin Panel</span>
+<aside class="w-64 bg-white border-r border-gray-200 p-4 shadow-sm">
+  <div class="text-2xl font-bold text-purple-700 mb-6">Admin Panel</div>
+  <nav class="space-y-2">
+    <a href="<?= base_url('admin/dashboard') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">dashboard</span> Dashboard
     </a>
-  </div>
-  <ul class="menu-inner py-1">
-    <li class="menu-item"><a href="<?= base_url('index.php/admin') ?>" class="menu-link"><i class="menu-icon ti ti-home"></i> Dashboard</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/admin/stock_barang') ?>" class="menu-link"><i class="menu-icon ti ti-box"></i> Stock Barang</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/admin/input_barang') ?>" class="menu-link"><i class="menu-icon ti ti-plus"></i> Input Barang</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/admin/pesanan') ?>" class="menu-link"><i class="menu-icon ti ti-shopping-cart"></i> Pesanan</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/admin/laporan') ?>" class="menu-link"><i class="menu-icon ti ti-file-invoice"></i> Laporan</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/admin/profile') ?>" class="menu-link"><i class="menu-icon ti ti-user"></i> Profile</a></li>
-    <li class="menu-item"><a href="<?= base_url('index.php/auth/logout') ?>" class="menu-link text-danger"><i class="menu-icon ti ti-logout"></i> Logout</a></li>
-  </ul>
+    <a href="<?= base_url('admin/stock_barang') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">inventory</span> Stock Barang
+    </a>
+    <a href="<?= base_url('admin/input_barang') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">add_box</span> Input Barang
+    </a>
+    <a href="<?= base_url('admin/pesanan') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">shopping_cart</span> Pesanan
+    </a>
+    <a href="<?= base_url('admin/laporan') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">bar_chart</span> Laporan
+    </a>
+    <a href="<?= base_url('admin/profile') ?>" class="flex items-center px-3 py-2 rounded-md hover:bg-purple-100 text-gray-700 font-medium">
+      <span class="material-icons mr-2">person</span> Profile
+    </a>
+    <a href="<?= base_url('auth/logout') ?>" class="flex items-center px-3 py-2 rounded-md text-red-500 hover:bg-red-100">
+      <span class="material-icons mr-2">logout</span> Logout
+    </a>
+  </nav>
 </aside>

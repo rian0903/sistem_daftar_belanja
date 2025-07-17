@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="<?= base_url('assets/') ?>" data-template="front-pages">
+<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default"
+  data-assets-path="<?= base_url('assets/') ?>" data-template="front-pages">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Sistem Daftar Belanja</title>
+  <title>Landing Page - SmartList</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/favicon/favicon.ico') ?>" />
@@ -11,7 +13,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="<?= base_url('assets/vendor/fonts/fontawesome.css') ?>" />
@@ -41,12 +44,12 @@
   <header class="layout-navbar container-fluid navbar navbar-expand-lg align-items-lg-center bg-navbar-theme">
     <div class="container">
       <a class="navbar-brand fw-bold me-4" href="#">
-        Sistem Daftar Belanja
+        SmartList
       </a>
 
       <div class="d-flex align-items-center ms-auto">
-        <a href="<?= base_url('index.php/auth/login') ?>" class="btn btn-primary me-2">Login</a>
-        <a href="<?= base_url('index.php/auth/register') ?>" class="btn btn-outline-secondary">Daftar</a>
+        <a href="<?= base_url('auth/login') ?>" class="btn btn-primary me-2">Login</a>
+        <a href="<?= base_url('auth/register') ?>" class="btn btn-outline-secondary">Daftar</a>
       </div>
     </div>
   </header>
@@ -54,9 +57,9 @@
   <!-- Hero Section -->
   <section class="py-5 bg-light">
     <div class="container text-center">
-      <h1 class="display-4 fw-bold mb-3">Selamat Datang di Sistem Daftar Belanja</h1>
+      <h1 class="display-4 fw-bold mb-3">Selamat Datang di SmartList</h1>
       <p class="lead mb-4">Kelola belanjaanmu dengan lebih rapi, efisien, dan profesional bersama kami!</p>
-      <a href="<?= base_url('index.php/auth/login') ?>" class="btn btn-primary btn-lg">Mulai Sekarang</a>
+      <a href="<?= base_url('auth/login') ?>" class="btn btn-primary btn-lg">Mulai Sekarang</a>
     </div>
   </section>
 
@@ -86,7 +89,7 @@
   <!-- Footer -->
   <footer class="py-4 bg-dark text-white text-center">
     <div class="container">
-      <p class="mb-0">&copy; <?= date('Y') ?> Sistem Daftar Belanja. All rights reserved.</p>
+      <p class="mb-0">&copy; <?= date('Y') ?> SmartList. All rights reserved.</p>
     </div>
   </footer>
 
@@ -99,4 +102,5 @@
   <script src="<?= base_url('assets/vendor/libs/aos/aos.js') ?>"></script>
   <script src="<?= base_url('assets/js/front-page.js') ?>"></script>
 </body>
+
 </html>

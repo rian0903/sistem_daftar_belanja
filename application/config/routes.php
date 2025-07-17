@@ -62,14 +62,18 @@ $route['register'] = 'auth/register';
 $route['reset-password'] = 'auth/reset_password';
 $route['logout'] = 'auth/logout';
 
-$route['admin'] = 'admin/index';
+$route['admin'] = 'admin';
+$route['admin/dashboard'] = 'admin/index';
 $route['admin/stock'] = 'admin/stock_barang';
 $route['admin/input'] = 'admin/input_barang';
 $route['admin/pesanan'] = 'admin/pesanan';
 $route['admin/laporan'] = 'admin/laporan';
 $route['admin/profile'] = 'admin/profile';
+$route['admin/laporan_pdf'] = 'admin/laporan_pdf';
+$route['admin/laporan_excel'] = 'admin/laporan_excel';
 
-$route['pembeli'] = 'pembeli/index';
+
+$route['pembeli'] = 'pembeli';
 $route['pembeli/barang'] = 'pembeli/barang';
 $route['pembeli/keranjang'] = 'pembeli/keranjang';
 $route['pembeli/checkout'] = 'pembeli/checkout';
