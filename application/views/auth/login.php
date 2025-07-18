@@ -73,7 +73,7 @@
                                     <input class="form-check-input" type="checkbox" id="remember-me" />
                                     <label class="form-check-label" for="remember-me">Ingat Saya</label>
                                 </div>
-                                <a href="<?= base_url('auth/reset_password') ?>">Lupa Password?</a>
+                                <a href="<?= base_url('auth/forgotPassword') ?>">Lupa Password?</a>
                             </div>
 
                             <div class="mb-3">

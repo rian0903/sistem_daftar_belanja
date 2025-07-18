@@ -80,7 +80,7 @@
         <div class="col-md-4 mb-4">
           <i class="ti ti-chart-pie fs-1 mb-3 text-warning"></i>
           <h5>Laporan Otomatis</h5>
-          <p>Admin dapat mengekspor laporan penjualan dalam format PDF dan Excel.</p>
+          <p>Admin dapat mengekspor laporan penjualan dalam format PDF.</p>
         </div>
       </div>
     </div>

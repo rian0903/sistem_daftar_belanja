@@ -15,8 +15,10 @@ class Product_model extends CI_Model {
         return $this->db->get_where('products', ['id' => $id])->row();
     }
 
-    public function insert($data) {
-        return $this->db->insert('products', $data);
+    public function insert($data)
+    {
+        $this->db->insert('products', $data);
+        return $this->db->insert_id(); 
     }
 
     public function update_product($id, $data)
@@ -44,5 +46,18 @@ class Product_model extends CI_Model {
     
         return $this->db->get('products')->result();
     }
+
+    public function get_filtered($q = null, $kategori = null)
+    {
+        $this->db->select('*')->from('products');
+        if ($q) {
+            $this->db->like('name', $q);
+        }
+        if ($kategori) {
+            $this->db->where('category_id', $kategori);
+        }
+        return $this->db->get()->result();
+    }
+    
     
 }

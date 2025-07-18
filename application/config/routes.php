@@ -59,13 +59,16 @@ $route['landing'] = 'landing';
 
 $route['login'] = 'auth/login';
 $route['register'] = 'auth/register';
-$route['reset-password'] = 'auth/reset_password';
+$route['email_verification'] = 'auth/email_verification';
+$route['forgot-password'] = 'auth/forgotPassword';
+$route['reset-password/(:any)'] = 'auth/resetPassword/$1';
 $route['logout'] = 'auth/logout';
 
 $route['admin'] = 'admin';
 $route['admin/dashboard'] = 'admin/index';
 $route['admin/stock'] = 'admin/stock_barang';
 $route['admin/input'] = 'admin/input_barang';
+$route['admin/delete/(:num)'] = 'admin/delete/$1';
 $route['admin/pesanan'] = 'admin/pesanan';
 $route['admin/laporan'] = 'admin/laporan';
 $route['admin/profile'] = 'admin/profile';
@@ -76,6 +79,8 @@ $route['admin/laporan_excel'] = 'admin/laporan_excel';
 $route['pembeli'] = 'pembeli';
 $route['pembeli/barang'] = 'pembeli/barang';
 $route['pembeli/keranjang'] = 'pembeli/keranjang';
+$route['pembeli/keranjang_tambah/(:num)'] = 'pembeli/keranjang_tambah/$1';
+$route['pembeli/keranjang_kurang/(:num)'] = 'pembeli/keranjang_kurang/$1';
 $route['pembeli/checkout'] = 'pembeli/checkout';
 $route['pembeli/profile'] = 'pembeli/profile';
 $route['pembeli/tambah/(:num)'] = 'pembeli/tambah_keranjang/$1';

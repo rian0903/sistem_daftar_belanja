@@ -1,3 +1,6 @@
-<footer class="text-center text-sm text-purple-700 py-4">
-  Dibuat oleh Nanda 🤝
+<footer class="content-footer footer bg-footer-theme">
+  <div class="container-fluid d-flex justify-content-between py-2">
+    <div>© <?= date('Y') ?> SmartList</div>
+    <div>Dibuat oleh Nanda 🤝</div>
+  </div>
 </footer>

@@ -34,17 +34,22 @@
               </a>
             </div>
 
-            <h4 class="mb-1">Lupa Password?</h4>
-            <p class="mb-4">Masukkan email kamu untuk menerima link reset</p>
+            <h4 class="mb-1">Reset Password 🔐</h4>
+            <p class="mb-4">Masukkan password baru kamu</p>
+
+            <?php if ($this->session->flashdata('error')): ?>
+              <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('success')): ?>
+              <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
+            <?php endif; ?>
 
             <form method="post" action="">
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-control" name="email"
-                  placeholder="you@example.com" required />
+                <label for="password" class="form-label">Password Baru</label>
+                <input type="password" class="form-control" name="password" placeholder="••••••••" required>
               </div>
-
-              <button type="submit" class="btn btn-primary d-grid w-100">Kirim Link Reset</button>
+              <button type="submit" class="btn btn-primary d-grid w-100">Reset Password</button>
             </form>
 
             <p class="text-center mt-3">

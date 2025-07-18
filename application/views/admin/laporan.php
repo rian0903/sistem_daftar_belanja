@@ -11,7 +11,6 @@
   </div>
   <div class="space-x-2">
     <a href="<?= base_url('admin/laporan_pdf') ?>" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Download PDF</a>
-    <a href="<?= base_url('admin/laporan_excel') ?>" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Download Excel</a>
   </div>
 </div>
 

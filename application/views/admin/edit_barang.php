@@ -30,7 +30,7 @@
 
         <div class="flex justify-between">
             <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Update</button>
-            <a href="<?= base_url('admin/hapus_barang/' . $product->id) ?>" onclick="return confirm('Yakin ingin menghapus produk ini?')" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Hapus</a>
+            <a href="<?= base_url('admin/delete/' . $product->id) ?>" onclick="return confirm('Yakin ingin menghapus produk ini?')" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Hapus</a>
         </div>
     </form>
 </div>

@@ -19,6 +19,17 @@ class User_model extends CI_Model {
         return $this->db->get_where('users', ['id' => $id])->row();
     }
 
+    public function getUserByEmail($email) {
+        return $this->db->get_where('users', ['email' => $email])->row_array();
+    }
+
+    public function verifyUser($email) {
+        $this->db->set('is_verified', 1);
+        $this->db->set('verify_token', null);
+        $this->db->where('email', $email);
+        $this->db->update('users');
+    }
+
     public function update($id, $data) {
         return $this->db->update('users', $data, ['id' => $id]);
     }

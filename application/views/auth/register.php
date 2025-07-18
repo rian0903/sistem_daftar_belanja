@@ -26,7 +26,8 @@
 
         <div class="card">
           <div class="card-body">
-            <div class="app-brand justify-content-center mb-6">
+
+            <div class="app-brand justify-content-center mb-4">
               <a href="<?= base_url() ?>" class="app-brand-link">
                 <span class="app-brand-logo demo">
                   <img src="<?= base_url('assets/img/logo.png') ?>" width="32">
@@ -36,26 +37,36 @@
             </div>
 
             <h4 class="mb-1">Daftar Akun Baru 🚀</h4>
-            <p class="mb-4">Isi formulir di bawah untuk membuat akun pembeli</p>
+            <p class="mb-4">Isi formulir di bawah untuk membuat akun pembeli.</p>
+
+            <!-- Alert Message -->
+            <?php if ($this->session->flashdata('success')): ?>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('success') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <?php elseif ($this->session->flashdata('error')): ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= $this->session->flashdata('error') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <?php endif; ?>
 
             <form action="<?= base_url('auth/register') ?>" method="post">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Nama lengkap"
-                  required />
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nama lengkap" required />
               </div>
 
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email"
-                  placeholder="Alamat email" required />
+                <input type="email" class="form-control" id="email" name="email" placeholder="Alamat email" required />
               </div>
 
               <div class="mb-3 form-password-toggle">
                 <label for="password" class="form-label">Password</label>
                 <div class="input-group input-group-merge">
-                  <input type="password" id="password" name="password" class="form-control"
-                    placeholder="********" required />
+                  <input type="password" id="password" name="password" class="form-control" placeholder="********" required />
                   <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
                 </div>
               </div>
@@ -68,6 +79,7 @@
             <p class="text-center">
               Sudah punya akun? <a href="<?= base_url('auth/login') ?>">Login di sini</a>
             </p>
+
           </div>
         </div>
 
@@ -80,5 +92,4 @@
   <script src="<?= base_url('assets/vendor/js/bootstrap.js') ?>"></script>
   <script src="<?= base_url('assets/js/main.js') ?>"></script>
 </body>
-
 </html>
